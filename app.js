@@ -7,14 +7,25 @@ const app = express();
 const expressHandleBar = require("express-handlebars");
 
 /*
-  Setting up Handle Bars Template Engine
-  Pug Temlate was installed in NodeJS internally
-  so we just need to run app.set()
+  Object within expressHandleBar is essential 
 
-  For Handle bar, it is not installed internally
-  in NodeJS so we have to run app.engine()
+  layoutsDir: point to the directory of the layout
+
+  defaultLayout: point to the file in the directory 
+  that would be set as a default layout, will be applied
+  for any page (not like pug which we extends it in pages
+    that we want)
+
+  extname: notify the extension name of the layout file
 */
-app.engine("handlebars", expressHandleBar());
+app.engine(
+  "handlebars",
+  expressHandleBar({
+    layoutsDir: "views/layouts/",
+    defaultLayout: "main-layout",
+    extname: "handlebars",
+  })
+);
 app.set("view engine", "handlebars");
 app.set("views", "views");
 

@@ -75,6 +75,23 @@ III. Module Notes:
             See app.js > 404 page render
                 routes/admin.js > add-product page render
                 routes/shop.js > shop page render
+        
+        b. Implementing Handlebars: 
+            - 6th Commit
+
+            - app.js for setting up, read the comments to 
+            understand details of layout file and setting up
+            configurations
+            - ./views/layout/main-layout.handlebars: for layout
+
+            NOTE: {{{ body }}}, other .handlebars file will be 
+            fit in this body
+
+            - Other .handlebars files in ./views
+
+            NOTE: 
+                Conditional: {{#if hasProducts }}
+                Iteration: {{#each prods}} 
 
 IV. Other Notes: 
     What's in this module:

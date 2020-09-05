@@ -7,10 +7,14 @@ const router = express.Router();
 const products = [];
 
 // /admin/add-product => GET
+// formCSS for handlebars
 router.get("/add-product", (req, res, next) => {
   res.render("add-product", {
     pageTitle: "Add Product",
     path: "/admin/add-product",
+    formsCSS: true,
+    productCSS: true,
+    activeAddProduct: true,
   });
 });
 
