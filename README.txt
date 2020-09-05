@@ -62,6 +62,19 @@ III. Module Notes:
 
             Official Pug Docs: 
             https://pugjs.org/api/getting-started.html
+    
+    3. Working with Handlebars: 
+        a. Setting up Hanlde Bars:
+            (Works similiar to JSX in React) 
+            - Commit 5th
+            - Setting up in app.js
+            - Code in ./views/404.handlebars
+            
+            NOTE THAT: the way of passing data 
+            is exactly the same across templates
+            See app.js > 404 page render
+                routes/admin.js > add-product page render
+                routes/shop.js > shop page render
 
 IV. Other Notes: 
     What's in this module:

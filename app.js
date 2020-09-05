@@ -4,7 +4,18 @@ const path = require("path");
 
 const app = express();
 
-app.set("view engine", "pug");
+const expressHandleBar = require("express-handlebars");
+
+/*
+  Setting up Handle Bars Template Engine
+  Pug Temlate was installed in NodeJS internally
+  so we just need to run app.set()
+
+  For Handle bar, it is not installed internally
+  in NodeJS so we have to run app.engine()
+*/
+app.engine("handlebars", expressHandleBar());
+app.set("view engine", "handlebars");
 app.set("views", "views");
 
 const adminData = require("./routes/admin");
