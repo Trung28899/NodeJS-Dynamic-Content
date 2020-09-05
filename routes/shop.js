@@ -8,7 +8,17 @@ const router = express.Router();
 
 router.get("/", (req, res, next) => {
   console.log(adminData.products);
-  res.sendFile(path.join(rootDirectory, "views", "shop.html"));
+  /*
+    This will use the default templating engine
+    notified in app.js (app.set)to return the template
+
+    This will also look into the folder views that 
+    we notified in app.js (app.set) to return the template
+
+    Also no need to render('shop.pug') since the system already 
+    know the default engine
+  */
+  res.render("shop");
 });
 
 module.exports = router;

@@ -1,5 +1,10 @@
 I. Tools Used: 
 
+    - $ npm install 
+    - $ npm install --save express
+    - $ npm install --save body-parser
+    - $ npm install --save ejs pug express-handlebars
+
 II. Core Concepts: 
     1. Templating Engines: 
         - Look for "Templating Engines 
@@ -20,6 +25,20 @@ III. Module Notes:
         and export
         - See routes/shop.js for how to import 
         and use it 
+
+        pub > type html, go to html:5 to have the template
+
+    2. Installing and Setting up PUG: 
+        - 3rd Commit
+        - See in app.js for how to set up
+        pub engines and view file
+        - See in shop.js for how to render 
+        and return pub template
+        - See in views/shop.pug for templating 
+        and syntax.
+
+        NOTE THAT: to get a template in .pub file, 
+        > type html, go to html:5 to have the template
 
 IV. Other Notes: 
     What's in this module:
