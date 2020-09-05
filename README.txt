@@ -1,6 +1,12 @@
 I. Tools Used: 
 
 II. Core Concepts: 
+    1. Templating Engines: 
+        - Look for "Templating Engines 
+        and Different Templating Engines"
+        in this document: 
+
+        https://docs.google.com/document/d/1fW7WSCaD98QZvdSwpHJEw5zn_TnahGeR5L_FRu__XnM/edit
 
 III. Module Notes: 
     1. Sharing Data Across Requests and Users: 
@@ -10,7 +16,7 @@ III. Module Notes:
         time, you don't want to share data 
         for all like this.
 
-        - See routes/admin.js for how to set up
+        - See routes/admin.j s for how to set up
         and export
         - See routes/shop.js for how to import 
         and use it 

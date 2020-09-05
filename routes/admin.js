@@ -13,11 +13,9 @@ router.get("/add-product", (req, res, next) => {
 
 // /admin/add-product => POST
 router.post("/add-product", (req, res, next) => {
-  // Adding data to products array
   products.push({ title: req.body.title });
   res.redirect("/");
 });
 
 exports.routes = router;
-// exporting array as a storage
 exports.products = products;
