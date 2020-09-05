@@ -4,6 +4,7 @@ I. Tools Used:
     - $ npm install --save express
     - $ npm install --save body-parser
     - $ npm install --save ejs pug express-handlebars
+    - $ npm install --save express-handlebars@3.0
 
 II. Core Concepts: 
     1. Templating Engines: 
@@ -28,17 +29,39 @@ III. Module Notes:
 
         pub > type html, go to html:5 to have the template
 
-    2. Installing and Setting up PUG: 
-        - 3rd Commit
-        - See in app.js for how to set up
-        pub engines and view file
-        - See in shop.js for how to render 
-        and return pub template
-        - See in views/shop.pug for templating 
-        and syntax.
+    2. Installing and Implementing PUG: 
+        a. Setting up PUG: 
+            - 3rd Commit
+            - See in app.js for how to set up
+            pub engines and view file
+            - See in shop.js for how to render 
+            and return pub template
+            - See in views/shop.pug for templating 
+            and syntax.
 
-        NOTE THAT: to get a template in .pub file, 
-        > type html, go to html:5 to have the template
+            NOTE THAT: to get a template in .pub file, 
+            > type html, go to html:5 to have the template
+        
+        b. Dynamic Content with PUG: 
+            - 4th Commit
+            - See shop.js for how to pass data into .pug file
+            - See views/shop.pug to see how to template 
+            Dynamic Content
+
+        c. Layouts: 
+            - 4th Commit
+            - ./layouts/main-layout.pug for implementing a 
+            layout. Notice: 
+                +, "block style" and "block content"
+                +, a tags with path variable
+                => These 2 are determined by different pages
+            - See .pug files in ./views for how to import the layout
+                Notice: 
+                +, "block style" and "block content"
+                +, extends
+
+            Official Pug Docs: 
+            https://pugjs.org/api/getting-started.html
 
 IV. Other Notes: 
     What's in this module:

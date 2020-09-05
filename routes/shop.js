@@ -7,18 +7,19 @@ const rootDirectory = require("../helper/path");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  console.log(adminData.products);
+  // Getting products from admin
+  const products = adminData.products;
   /*
-    This will use the default templating engine
-    notified in app.js (app.set)to return the template
+    passing data into template. 
+    In the Pug file now we can use 
+    prods and docTitle variables 
 
-    This will also look into the folder views that 
-    we notified in app.js (app.set) to return the template
-
-    Also no need to render('shop.pug') since the system already 
-    know the default engine
+    NOTE: in pug file: 
+      - #{} Allow you to use variable
+      - Notice the conditional statement 
+        and Iteration
   */
-  res.render("shop");
+  res.render("shop", { prods: products, pageTitle: "Shop", path: "/" });
 });
 
 module.exports = router;
