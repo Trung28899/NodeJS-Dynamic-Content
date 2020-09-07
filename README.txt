@@ -94,13 +94,16 @@ III. Module Notes:
                 Iteration: {{#each prods}} 
     
     4. Working with EJS (preferred) 
-        - 7th Commit
+        - 8th Commit
         - Setting up: app.js
         - Template in ./views
 
         Nothing change in JS codes except for setting up
         in app.js
-
+        
+        Except for the set up, this JS code work for 
+        either handlebars, pug and EJS
+        
 IV. Other Notes: 
     What's in this module:
         - Managin Data (without Database)
