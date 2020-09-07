@@ -92,6 +92,14 @@ III. Module Notes:
             NOTE: 
                 Conditional: {{#if hasProducts }}
                 Iteration: {{#each prods}} 
+    
+    4. Working with EJS (preferred) 
+        - 7th Commit
+        - Setting up: app.js
+        - Template in ./views
+
+        Nothing change in JS codes except for setting up
+        in app.js
 
 IV. Other Notes: 
     What's in this module:

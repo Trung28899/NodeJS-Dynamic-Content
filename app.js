@@ -7,26 +7,11 @@ const app = express();
 const expressHandleBar = require("express-handlebars");
 
 /*
-  Object within expressHandleBar is essential 
+  EJS is internally installed with NodeJS
 
-  layoutsDir: point to the directory of the layout
-
-  defaultLayout: point to the file in the directory 
-  that would be set as a default layout, will be applied
-  for any page (not like pug which we extends it in pages
-    that we want)
-
-  extname: notify the extension name of the layout file
+  EJS template use html + JS with some internal syntax 
 */
-app.engine(
-  "handlebars",
-  expressHandleBar({
-    layoutsDir: "views/layouts/",
-    defaultLayout: "main-layout",
-    extname: "handlebars",
-  })
-);
-app.set("view engine", "handlebars");
+app.set("view engine", "ejs");
 app.set("views", "views");
 
 const adminData = require("./routes/admin");
@@ -40,7 +25,10 @@ app.use("/admin", adminData.routes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-  res.status(404).render("404", { pageTitle: "Page Not Found" });
+  console.log("got in here");
+  res
+    .status(404)
+    .render("404", { pageTitle: "Page Not Found", path: "/notFound" });
 });
 
 app.listen(3000);
